@@ -282,23 +282,6 @@
 // using namespace std;
 // int main() {
 //     int n;
-//     cout << "Enter the n" << endl;
-//     cin >> n;
-//     int factorial = 0;
-//     int i = 1;
-//     while(i<=n) {
-//         factorial = i*n;
-//         cout << "The Factorial of " << n << " is : " << factorial;
-//         i++;
-//     }
-//     return 0;
-// }
-
-
-// #include<iostream>
-// using namespace std;
-// int main() {
-//     int n;
 //     cin >> n;
 
 //     int i = 2;
