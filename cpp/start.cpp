@@ -1,4 +1,5 @@
-// #include<iostream>
+//1
+// #include<iostream> 
 // int main() {
 //     std::cout << "Hey Nish" ;
 //     return 0;
@@ -11,6 +12,7 @@
 //     cout << "yosh bro";
 // }
 
+//2
 // #include<iostream>
 // using namespace std;
 // int main() {
@@ -20,6 +22,7 @@
 //     return 0;
 // }
 
+//3
 // #include<iostream>
 // using namespace std;
 // int main() {
@@ -29,6 +32,8 @@
 //     return 0;
 // }
 
+
+//4
 // #include<bits/stdc++.h>
 // using namespace std;
 // int main() {
@@ -40,6 +45,8 @@
 //     return 0;
 // }
 
+
+//5
 // #include<iostream>
 // using namespace std;
 // int main(){
@@ -55,7 +62,7 @@
 
 
                   // data types 
-
+//6
 // #include<bits/stdc++.h>
 // using namespace std;
 // int main () {
@@ -77,6 +84,7 @@
 
                            // if -else
 
+//7
 // #include<bits/stdc++.h>
 // using namespace std;
 // int main() {
@@ -94,7 +102,7 @@
 //     return 0;
 // }
 
-
+//8
 // #include<bits/stdc++.h>
 // using namespace std;
 // int main() {
@@ -120,6 +128,8 @@
 //    }
 // }
 
+
+//9
 // #include<bits/stdc++.h>
 // using namespace std;
 // int main() {
@@ -137,6 +147,7 @@
 
                                 //switch statement
 
+//10
 // #include<iostream>
 // using namespace std;
 // int main() {
@@ -172,6 +183,7 @@
 
                                        // loops;
 
+//11
 // #include<iostream>
 // using namespace std;
 // int main() {
@@ -183,6 +195,7 @@
 // }
 
 
+//12
 // #include<iostream>
 // using namespace std;
 // int main() {
@@ -194,7 +207,7 @@
 //     }
 // }
 
-
+//13
 // #include<iostream>
 // using namespace std;
 // int main() {
@@ -208,6 +221,8 @@
 //     }
 // }
 
+
+//14
 // #include<iostream>
 // using namespace std;
 // int main() {
@@ -219,6 +234,7 @@
 
                                   // while loop;
 
+//15
 // #include<iostream>
 // using namespace std;
 // int main() {
@@ -232,6 +248,7 @@
 //     return 0;
 // }
 
+//16
 // #include<iostream>
 // using namespace std;
 // int main() {
@@ -248,6 +265,8 @@
 //     return 0;
 // }
 
+
+//17
 // #include<iostream>
 // using namespace std;
 // int main() {
@@ -271,13 +290,7 @@
 // }
 
 
-// #include<iostream>
-// using namespace std;
-// int main() {
-
-// }
-
-
+//18
 // #include<iostream>
 // using namespace std;
 // int main() {
@@ -296,5 +309,121 @@
 //     }
 //     return 0;
 // }
+
+                                        // functions
+
+//19
+// #include<iostream>
+// using namespace std;
+// int power(int a,int b) {
+//     int ans = 1;
+//     for(int i=1;i<=b;i++) {
+//         ans = ans*a;
+//     }
+//     return ans;
+// }
+// int main() {
+//     int a,b;
+//     int c,d;
+//     cin >> a >> b >> c >> d;
+//     // power(a,b);
+//     cout << "Answer is : " << power(a,b) << endl; 
+//     cout << "Answer is : " << power(c,d) << endl; 
+
+//     return 0;
+// }
+
+
+//20
+// #include<iostream>
+// using namespace std;
+// int EvenOrOdd(int n) {
+//     if(n%2 == 0) {
+//         cout << "Even num is " << n  << endl;
+//     }
+//     else {
+//         cout << "Odd num is " << n << endl;
+//     }
+//     return n;
+// }
+// int main() {
+//     int num;
+//     cout << "enter the num " << "\n";
+//     cin >> num;
+//     EvenOrOdd(num);
+// }
+
+//21
+// #include<iostream>
+// using namespace std;
+// int factorial(int n) {
+//     int fact = 1;
+//     for(int i=1;i<=n;i++) {
+//         fact = fact * i;
+//     }
+//     return fact;
+// }
+// int main() {
+//     int num;
+//     cin >> num;
+//     cout << "fact is " << factorial(num) << endl;
+//     return 0;
+// }
+
+
+//22
+// #include<iostream>
+// using namespace std;
+
+// bool isPrimeOrNot(int n) {
+//     for(int i=2;i<n;i++) {
+//         if(n%i == 0) {
+//             return 0;
+//         }
+//         return 1;
+//     }
+// }
+// int main() {
+//     int num;
+//     cout << "Enter the num" << endl;
+//     cin >> num;
+
+//     // cout << "the num is " << isPrimeOrNot(num) << endl;
+//     if(isPrimeOrNot(num)) {
+//         cout << " is prime num";
+//     }
+//     else {
+//         cout << "Not Prime Nun bro";
+//     }
+// }
+
+//23             // call by value   -> we send the copy of value not the address of value
+// #include<iostream>
+// using namespace std;
+// void dummy(int n) {
+//     n++;
+//     cout << "The n is : " << n << endl;
+// }
+// int main() {
+//     int n= 2;
+//     dummy(n);
+//     cout << "the n " << n << endl;
+// }
+
+
+//24                 // we send the address of value using & there or many options to share the address
+// #include<iostream>
+// using namespace std;
+// void dummy(int &n) {
+//     n++;
+//     cout << "The n is : " << n << endl;
+// }
+// int main() {
+//     int n= 2;
+//     dummy(n);
+//     cout << "the n " << n << endl;
+// }
+
+
 
 
