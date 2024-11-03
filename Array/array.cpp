@@ -40,18 +40,18 @@
 // #include<iostream>
 // using namespace std;
 // int main(){
-    // int arr[50];
-    // int n;
-    // cout << "Enter size of array" << "\n";
-    // cin >> n;
-    // cout << "Enter elements of aaray" << "\n";
-    // for(int i=0;i<n;i++){
-    //     cin >> arr[i];
-    // }
+//     int arr[50];
+//     int n;
+//     cout << "Enter size of array" << "\n";
+//     cin >> n;
+//     cout << "Enter elements of aaray" << "\n";
+//     for(int i=0;i<n;i++){
+//         cin >> arr[i];
+//     }
 
-    // for(int i=0;i<n;i++){
-    //     cout << 1 << " ";
-    // }
+//     for(int i=0;i<n;i++){
+//         cout << 1 << " ";
+//     }
 
 
     // int arr[4] = {1,2,3,4};
@@ -65,7 +65,7 @@
     // }
 // }
 
-//4
+// 4
 // #include<iostream>
 // using namespace std;
 // void printarr(int arr[],int size){
