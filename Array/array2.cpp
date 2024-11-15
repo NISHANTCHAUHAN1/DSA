@@ -59,8 +59,8 @@
 // #include<vector>
 // using namespace std;
 // int main() {
-//     vector<int> arr{1,2,3,4,5};
-//     vector<int> brr{6,7,2,8,1,7};
+//     vector<int> arr{1 ,2, 2, 2, 3, 4};
+//     vector<int> brr{2,2,3,3};
 
 //     vector<int> ans;
 
@@ -195,60 +195,60 @@
 // }
 
 // 8 
-// #include<iostream>
-// #include<vector>
-// using namespace std;
-
-// int main() {
-//     vector<int> arr{1, 2, 3, -3, -4, 5, -7, 8, -1, -7};
-
-//     int s = 0;
-//     int e = arr.size() - 1;
-
-//     // Rearrange such that all negatives are in front
-//     while(s <= e) {
-//         if(arr[s] < 0){  // If current element at s is negative, just move s forward
-//             s++;
-//         }
-//         else if(arr[e] >= 0){  // If current element at e is positive, move e backward
-//             e--;
-//         }
-//         else {
-//             // Swap negative number from the right with positive number from the left
-//             swap(arr[s], arr[e]);
-//             s++;
-//             e--;
-//         }
-//     }
-
-//     // Print the modified array
-//     cout << "Array with negative numbers first:\n";
-//     for(int i = 0; i < arr.size(); i++){
-//         cout << arr[i] << " ";
-//     }
-// }
-
-//9
 #include<iostream>
 #include<vector>
 using namespace std;
-int main () {
-    vector<int> arr{1,2,3,2,4,5,4};
-    vector<int> ans;
 
-    for(int i=0; i<arr.size(); i++){
-        bool found = false;
-        for(int j=0; j<ans.size(); j++){
-            if(arr[i] == ans[j]){
-                found = true;
-            }
+int main() {
+    vector<int> arr{1, 2, 3, -3, -4, 5, -7, 8, -1, -7};
+
+    int s = 0;
+    int e = arr.size() - 1;
+
+    // Rearrange such that all negatives are in front
+    while(s <= e) {
+        if(arr[s] < 0){  // If current element at s is negative, just move s forward
+            s++;
         }
-        if(found) {
-            ans.push_back(arr[i]);
+        else if(arr[e] >= 0){  // If current element at e is positive, move e backward
+            e--;
+        }
+        else {
+            // Swap negative number from the right with positive number from the left
+            swap(arr[s], arr[e]);
+            s++;
+            e--;
         }
     }
 
-    for(int i=0; i<ans.size(); i++){
-        cout << ans[i] << " ";
+    // Print the modified array
+    cout << "Array with negative numbers first:\n";
+    for(int i = 0; i < arr.size(); i++){
+        cout << arr[i] << " ";
     }
 }
+
+//9
+// #include<iostream>
+// #include<vector>
+// using namespace std;
+// int main () {
+//     vector<int> arr{1,2,3,2,4,5,4};
+//     vector<int> ans;
+
+//     for(int i=0; i<arr.size(); i++){
+//         bool found = false;
+//         for(int j=0; j<ans.size(); j++){
+//             if(arr[i] == ans[j]){
+//                 found = true;
+//             }
+//         }
+//         if(found) {
+//             ans.push_back(arr[i]);
+//         }
+//     }
+
+//     for(int i=0; i<ans.size(); i++){
+//         cout << ans[i] << " ";
+//     }
+// }

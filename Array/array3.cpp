@@ -219,23 +219,23 @@
 // }
 
 //8 
-#include<iostream>
-#include<vector>
-using namespace std;
-int main(){
-    int r = 5;
-    int c = 5;
+// #include<iostream>
+// #include<vector>
+// using namespace std;
+// int main(){
+//     int r = 5;
+//     int c = 5;
 
-    int value;
-    cout << "Value is " << "\n";
-    cin >> value;
+//     int value;
+//     cout << "Value is " << "\n";
+//     cin >> value;
 
-    vector<vector<int> > arr(r ,vector<int>(c, value));
+//     vector<vector<int> > arr(r ,vector<int>(c, value));
 
-    for(int i=0; i<arr.size(); i++){
-        for(int j=0; j<arr[i].size();j++){
-            cout << arr[i][j] << " ";
-        }
-        cout << endl;
-    }
-}
+//     for(int i=0; i<arr.size(); i++){
+//         for(int j=0; j<arr[i].size();j++){
+//             cout << arr[i][j] << " ";
+//         }
+//         cout << endl;
+//     }
+// }
