@@ -33,56 +33,71 @@
 
 // 2.
 
-#include<iostream>
-using namespace std;
-int searchFirst(int nums[], int size, int key){
-    int s = 0;
-    int e = size-1;
-    int mid = s + (e-s)/2;
-    int ans = -1;
+// #include<iostream>
+// using namespace std;
+// int searchFirst(int nums[], int size, int key){
+//     int s = 0;
+//     int e = size-1;
+//     int mid = s + (e-s)/2;
+//     int ans = -1;
 
-    while(s <= e){
-        if(nums[mid] == key){
-            ans = mid;
-            e = mid - 1;
-        }
-        else if(key > nums[mid]){
-            s = mid+1;
-        }
-        else {
-            e = mid - 1;
-        }
-        mid = s+(e-s)/2;
-    }
-    return ans;
-}
+//     while(s <= e){
+//         if(nums[mid] == key){
+//             ans = mid;
+//             e = mid - 1;
+//         }
+//         else if(key > nums[mid]){
+//             s = mid+1;
+//         }
+//         else {
+//             e = mid - 1;
+//         }
+//         mid = s+(e-s)/2;
+//     }
+//     return ans;
+// }
 
-int searchLast(int nums[], int size, int key){
-    int s = 0, e = size-1;
-    int mid = s+(e-s)/2;
-    int ans = -1;
+// int searchLast(int nums[], int size, int key){
+//     int s = 0, e = size-1;
+//     int mid = s+(e-s)/2;
+//     int ans = -1;
 
-    while(s <= e) {
-        if(nums[mid] == key){
-            ans = mid;
-            s = mid + 1;
-        }
-        else if(key > nums[mid]){
-            s = mid+1;
-        }
-        else{
-            e = mid-1;
-        }
-        mid = s+(e-s)/2;
-    }
-    return ans;
-}
-int main() {
-    int nums[7] = {1,2,3,4,4,4,7};
-    int firstOcc = searchFirst(nums, 7, 4);
-    int lastOcc = searchLast(nums,7,4);
+//     while(s <= e) {
+//         if(nums[mid] == key){
+//             ans = mid;
+//             s = mid + 1;
+//         }
+//         else if(key > nums[mid]){
+//             s = mid+1;
+//         }
+//         else{
+//             e = mid-1;
+//         }
+//         mid = s+(e-s)/2;
+//     }
+//     return ans;
+// }
+// int main() {
+//     int nums[7] = {1,2,3,4,4,4,7};
+//     int firstOcc = searchFirst(nums, 7, 4);
+//     int lastOcc = searchLast(nums,7,4);
     
-    cout << "FisrtOcc = " << firstOcc << endl;
-    cout << "LastOcc = " << lastOcc << endl;
+//     cout << "FisrtOcc = " << firstOcc << endl;
+//     cout << "LastOcc = " << lastOcc << endl;
 
-}
+// }
+
+//3 find total occ of number
+
+// #include<iostream>
+// using namespace std;
+// int Firstfun(int arr[], int n, int k){
+//     int s = 0, e = n-1;
+//     int mid = s+(e-s)/2;
+//     int ans = -1;
+// }
+// int main(){
+//     int arr[10] = {1,2,3,4,5,5,5,5,5,7};
+    
+//     int FirstOcc = Firstfun(arr,10,5);
+// }
