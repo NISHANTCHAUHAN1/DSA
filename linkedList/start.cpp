@@ -21,7 +21,7 @@
 
 
 
-// insert at head
+// // insert at head
 
 // #include<iostream>
 // using namespace std;
@@ -41,8 +41,8 @@
 
 
 
-// INSERTION IN LINKED LIST AND DELELTION
-
+// INSERTION AND DELELTION IN SINGLY LINKED LIST
+ 
 // #include<iostream>
 // using namespace std;
 
@@ -129,11 +129,6 @@
 //     if (pos == 1) {
 //         Node* temp = head;
 //         head = head->next;
-
-//         // If head becomes null, also update tail
-//         if (head == NULL) {
-//             tail = NULL;
-//         }
 
 //         temp->next = NULL;
 //         delete temp;
@@ -383,3 +378,31 @@
 //     cout << getLength(head) << endl;
 // }
             
+                         // Circular Linked list
+
+// #include<iostream>
+// using namespace std;
+
+// class Node {
+//     public:
+//     int data;
+//     Node* next;
+
+//     // constructor
+//     Node(int data){
+//         this -> data = data;
+//         this -> next = NULL;
+//     }
+
+//     // distructor
+//     ~Node() {
+//         int value = this -> data;
+//         if(next != NULL){
+//             delete next;
+//             next = NULL;
+//         }
+//         cout << "Memory free " << value << endl;
+//     }
+// };
+
+// int main() {}
