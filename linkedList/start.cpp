@@ -380,29 +380,131 @@
             
                          // Circular Linked list
 
-// #include<iostream>
-// using namespace std;
+#include<iostream>
+using namespace std;
 
-// class Node {
-//     public:
-//     int data;
-//     Node* next;
+class Node {
+    public:
+    int data;
+    Node* next;
 
-//     // constructor
-//     Node(int data){
-//         this -> data = data;
-//         this -> next = NULL;
-//     }
+    // constructor
+    Node(int data){
+        this -> data = data;
+        this -> next = NULL;
+    }
 
-//     // distructor
-//     ~Node() {
-//         int value = this -> data;
-//         if(next != NULL){
-//             delete next;
-//             next = NULL;
-//         }
-//         cout << "Memory free " << value << endl;
-//     }
-// };
+    // distructor
+    ~Node() {
+        int value = this -> data;
+        if(next != NULL){
+            delete next;
+            next = NULL;
+        }
+        cout << "Memory free " << value << endl;
+    }
+};
 
-// int main() {}
+// INSERTION 
+
+void insertNode(Node* &tail, int element, int data){
+    // empty list case
+    if(tail == NULL){
+        Node* newNode = new Node(data);
+        tail = newNode;
+        newNode -> next = tail;
+    }
+
+    // if element present in list
+    else {
+        Node* curr = tail;
+
+        while(curr -> data != element){
+            curr = curr -> next;
+        }
+
+        // element found
+        Node* temp = new Node(data);
+        temp -> next = curr -> next;
+        curr -> next = temp;
+    }
+}
+
+// deletion
+
+void deleteNode(Node*& tail, int value) {
+    // Empty list check
+    if (tail == NULL) {
+        cout << "List is empty" << endl;
+        return;
+    }
+
+    Node* prev = tail;
+    Node* curr = tail->next;
+
+    // Find the node with the given value
+    while (curr->data != value && curr != tail) {
+        prev = curr;
+        curr = curr->next;
+    }
+
+    // If value is not found
+    if (curr->data != value) {
+        cout << "Value not found in the list" << endl;
+        return;
+    }
+
+    // If there's only one node
+    if (curr == prev) {
+        tail = NULL;
+    }
+    // If tail is the node to be deleted
+    else if (curr == tail) {
+        prev->next = curr->next;
+        tail = prev;  // Update tail
+    } else {
+        prev->next = curr->next; // Normal node deletion
+    }
+
+    curr->next = NULL;
+    delete curr;
+}
+
+
+
+// treversal
+void printNode(Node* tail){
+    Node* temp = tail;
+
+    if(tail == NULL){
+        cout << "List is Empty" << endl;
+        return;
+    }
+
+   do
+   {
+     cout << tail -> data << " ";
+     tail = tail -> next;
+   } while (tail != temp);
+   cout << endl;
+}
+
+int main() {
+    Node* tail = NULL;
+
+    insertNode(tail, 5, 3);
+    printNode(tail);
+
+    // insertNode(tail,3, 5);
+    // printNode(tail);
+
+    // insertNode(tail,5, 7);
+    // printNode(tail);
+
+    // insertNode(tail,5, 9);
+    // printNode(tail);
+
+    deleteNode(tail, 3);
+    printNode(tail);
+
+}
