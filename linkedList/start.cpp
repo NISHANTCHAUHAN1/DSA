@@ -495,14 +495,14 @@ int main() {
     insertNode(tail, 5, 3);
     printNode(tail);
 
-    // insertNode(tail,3, 5);
-    // printNode(tail);
+    insertNode(tail,3, 5);
+    printNode(tail);
 
-    // insertNode(tail,5, 7);
-    // printNode(tail);
+    insertNode(tail,5, 7);
+    printNode(tail);
 
-    // insertNode(tail,5, 9);
-    // printNode(tail);
+    insertNode(tail,5, 9);
+    printNode(tail);
 
     deleteNode(tail, 3);
     printNode(tail);
