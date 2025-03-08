@@ -201,8 +201,6 @@
 //     print(head);
 // }
 
- 
-
               // doubly  linkedlist
 
 // #include<iostream>
@@ -506,5 +504,4 @@ int main() {
 
     deleteNode(tail, 3);
     printNode(tail);
-
 }
