@@ -150,3 +150,88 @@
 //              return result;
 //         }
 //     };
+
+
+// 237. Delete Node in a Linked List
+
+// class Solution {
+//     public:
+//         void deleteNode(ListNode* node) {
+//             ListNode* prev = NULL;
+            
+//             while(node && node->next) {
+//                 node->val = node->next->val;
+//                 prev = node;
+//                 node = node->next;
+//             }
+//             delete(node);
+//             prev->next = NULL;
+//         }
+//     };
+
+// 2095. Delete the Middle Node of a Linked List
+
+// class Solution {
+//     public:
+//         ListNode* deleteMiddle(ListNode* head) {
+//             if(head == NULL || head->next == NULL){
+//                 return NULL;
+//             }
+    
+//             ListNode* prevSlow = NULL;
+//             ListNode* Slow = head;
+//             ListNode* Fast = head;
+    
+//             while(Fast != NULL && Fast->next != NULL){
+//                 prevSlow = Slow;
+//                 Slow = Slow->next;
+//                 Fast     = Fast->next->next;
+//             }
+//             prevSlow->next = Slow->next;
+//             delete(Slow);
+//             return head;
+//         }
+//     };
+
+// 328. Odd Even Linked List
+
+
+// class Solution {
+//     public:
+//         ListNode* oddEvenList(ListNode* head) {
+//             if(head == NULL || head->next == NULL)
+//                 return head;
+    
+//             ListNode* ODD = head;
+//             ListNode* EVEN = head->next;
+//             ListNode* evenStart = head->next;
+    
+//             while(EVEN != NULL && EVEN->next != NULL){
+//                 ODD->next = EVEN->next;
+//                 EVEN->next = EVEN->next->next;
+    
+//                 ODD = ODD->next;
+//                 EVEN = EVEN->next;
+//             }
+    
+//             ODD->next = evenStart;
+//             return head;
+//         }
+//     };
+
+
+// 876. Middle of the Linked List
+
+// class Solution {
+//     public:
+//         ListNode* middleNode(ListNode* head) {
+//             ListNode* slow = head;
+//             ListNode* fast = head;
+    
+//             while(fast != NULL && fast->next != NULL){
+//                 slow = slow->next;
+//                 fast = fast->next->next;
+//             }
+//             return slow;
+//         }
+//     };
